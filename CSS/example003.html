@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Example 3</title>
+        <meta charset="UTF-8">
+        <style>
+            /* Reglas Generales */
+            body{
+                font-size: 20px;
+                background-color: rgb(174, 174, 255);
+            }
+
+            /* Reglas CSS (Sintaxis) */
+            div.font40{
+                font-size: 40px;
+            }
+            .font2em{
+                font-size: 2em;
+            }
+            #rules{
+                background-color: aqua;
+            }
+
+            /* Reglas en selectores */
+            #selectors > div:nth-child(3){
+                /* se selecciona el div en base a su numero de aparicion */
+                background-color: chartreuse;
+            }
+            #selectors .example-class{
+                background-color: burlywood;
+            }
+            #selectors #example-id{
+                background-color: chocolate;
+            }
+            #selectors .example-combination{
+                background-color: antiquewhite;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>CSS Sintaxis</h1>
+        <section id="rules">
+            <h2>Reglas CSS: Propiedad, Valor y Selector</h2>
+            <p>
+                Una regla CSS está compuesta por tres partes: selector, propiedad y valor.<br>
+                El selector apunta a los elementos HTML a los que se aplicará el estilo.<br>
+                La propiedad especifica qué característica del elemento se va a cambiar (por ejemplo, color de fondo, tamaño de fuente).<br>
+                El valor es el valor específico que se asigna a la propiedad (por ejemplo, un color hexadecimal, un tamaño de fuente en píxeles).
+            </p>
+            <div class="font40">
+                EXAMPLE FONT 40PX
+            </div>
+            <div class="font2em">
+                EXAMPLE FONT 2EM
+            </div>
+        </section>
+        <section id="selectors">
+            <h2>Tipos de Selectores</h2>
+            <p>
+                Los selectores por etiqueta aplican estilos a todos los elementos con la misma etiqueta HTML (por ejemplo, todos los párrafos &lt;p&gt;).<br>
+                Los selectores por clase se utilizan para aplicar estilos a elementos con una clase específica (por ejemplo, &lt;div class="encabezado"&gt;).<br>
+                Los selectores por ID se utilizan para aplicar estilos a un elemento con un ID específico (por ejemplo, &lt;div id="principal"&gt;).<br>
+                Los selectores combinados permiten apuntar a elementos específicos en función de múltiples condiciones (por ejemplo, &lt;p.intro.destacado&gt;).
+            </p>
+            <div>EXAMPLE ELEMENT HTML</div>
+            <div class="example-class">EXAMPLE CLASS</div>
+            <div id="example-id">EXAMPLE ID</div>
+            <div class="example-combination">EXAMPLE COMBINATION</div>
+        </section>
+        <section>
+            <h2>Comentarios en CSS</h2>
+            <p>
+                Los comentarios en CSS se escriben entre /* y */ y se utilizan para documentar el código y hacerlo más legible.<br>
+                Los comentarios no afectan la apariencia de la página web y son útiles para anotar el propósito de ciertas reglas de estilo.
+            </p>
+        </section>
+    </body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Example 2</title>
+        <meta charset="UTF-8">
+        <style>
+            header{
+                display: flex;
+            }
+            div{
+                text-align: left;
+                flex-grow: 1;
+                flex-shrink: 0;
+                flex-basis: auto;
+            }
+            nav{
+                text-align: right;
+            }
+            ul{
+                list-style: none;
+                display: inline;
+                padding: 0;
+                margin: 0;
+            }
+            li{
+                display: inline;
+            }
+            section.main{
+                text-align: center;
+                background-color: rgb(233, 233, 233);
+                padding: 50px;
+                margin-top: 20px;
+            }
+            section.images div{
+                text-align: center;
+                border: 2px solid #ddd;
+                margin: 20px 100px;
+                padding: 40px;
+            }
+            footer{
+                margin-top: 50px;
+               text-align: center; 
+            }
+            .blog{
+                font-size: 20px;
+            }
+            .red{
+                color: red;
+            }
+            img{
+                width: 400px;
+            }
+           
+        </style>
+    </head>
+    <body>
+        <header>
+            <div>Company ABC</div>
+            <nav>
+                <ul>
+                    <li><a class="blog" href="">Inicio</a></li>
+                    <li><a class="blog" href="">Quienes Somos</a></li>
+                    <li><a class="blog red" href="">Blog</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section class="main">
+            <h1>Company ABC</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+        </section>
+        <section class="images">
+            <div>
+                <img src="https://block.codescandy.com/assets/images/hero/landing-accounting.jpg" alt="imagen">
+            </div>
+            <div>
+                <img src="https://block.codescandy.com/assets/images/hero/landing-accounting.jpg" alt="imagen">
+            </div>
+            <div>
+                <img src="https://block.codescandy.com/assets/images/hero/landing-accounting.jpg" alt="imagen">
+            </div>
+        </section>
+        <footer>
+            Todos los derechos 2024 - ACME
+        </footer>
+    </body>
+</html>
