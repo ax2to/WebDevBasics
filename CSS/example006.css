@@ -1,0 +1,27 @@
+body{
+    font-size: 20px;
+}
+h1{
+    margin-top: 80px;
+}
+.box100{
+    width: 100px; 
+    height: 100px;
+}
+.box-absolute{
+    background-color: blue;
+    border: 2px solid #000;
+    position: fixed;
+    top: 0;
+    left: 100px;
+    z-index: 100;
+    width: 100px;
+    height: 100px;
+}
+.box-relative{
+    position: relative;
+    border: 5px solid #000;
+}
+.box-relative .box-absolute{
+    position: relative;
+}
