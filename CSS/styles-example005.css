@@ -1,0 +1,89 @@
+/* Generales */
+body{
+font-size: 20px;
+}
+/* Ejemplos de margen */
+.example1{
+margin: 20px;
+}
+.example-left{
+margin-left: 20px;
+    margin: 0 0 0 20px;
+}
+.example-right{
+    margin-right: 20px;
+}
+.example-top{
+    margin-top: 20px;
+}
+.example-bottom{
+    margin-bottom: 20px;
+}
+.example-left-right{
+    margin: 0 20px;
+}
+.example-top-bottom{
+    margin: 20px 0;
+}
+/* Ejemplos de paddding */
+.padding{
+    padding: 20px;
+}
+.padding-left{
+    padding-left: 20px;
+}
+.padding-right{
+    padding-right: 20px;
+}
+.padding-top{
+    padding-top: 20px;
+}
+.padding-bottom{
+    padding-bottom: 20px;
+}
+.padding-left-right{
+    padding: 0 20px;
+}
+.padding-top-bottom{
+    padding: 20px 0;
+}
+/* Ejemplos de bordes */
+.border{
+    border: 5px solid #000;
+    margin: 20px;
+}
+.border-dashed{
+    border: 5px dashed #000;
+    margin: 20px;
+}
+.border-dotted{
+    border: 5px dotted #000;
+    margin: 20px;
+}
+.border-rounded{
+    /* BORDER: WIDTH STYLE COLOR*/
+    border: 3px solid #ef0404;
+    border-radius: 40px;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin: 20px;
+    padding: 20px;
+    display: inline-block;
+    border-width: 10px;
+    border-style: dotted;
+    border-color: blueviolet;
+    border-top: 3px solid #ef0404;
+    border-bottom: 3px solid #ef0404;
+}
+
+.columns{
+    display: flex;
+}
+.columns .left{
+    flex: 0 auto;
+    padding: 50px;
+}
+.columns .right{
+    flex: 0 auto;
+    padding: 50px;
+}
