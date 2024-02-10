@@ -1,0 +1,195 @@
+/**
+General
+*/
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+.container-top {
+    background-color: #155bd5;
+}
+
+.container-gray {
+    background-color: #fafafa;
+}
+
+header,
+section.slide,
+section.story {
+    width: 1280px;
+    margin: 0 auto;
+}
+
+/**
+header
+*/
+header {
+    padding: 40px;
+}
+
+header .logo {
+    display: inline-block;
+    margin-right: 80px;
+}
+
+header .menu {
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 10px;
+}
+
+header .icon {
+    display: inline-block;
+    vertical-align: top;
+    color: white;
+    margin-top: 5px;
+    width: 528px;
+    text-align: right;
+}
+
+header .menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header .menu ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+header .menu ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/**
+Slide
+*/
+section.slide {
+    color: white;
+    display: flex;
+    padding-bottom: 100px;
+}
+
+section.slide .content {
+    width: 50%;
+    align-self: center;
+}
+
+section.slide .content h1 {
+    margin: 0;
+    font-size: 44px;
+}
+
+section.slide .content p {
+    margin: 40px 0;
+}
+
+section.slide .content button {
+    font-size: 16px;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    margin-right: 20px;
+    vertical-align: top;
+}
+
+section.slide .content a {
+    color: white;
+    text-decoration: none;
+    height: 42px;
+    display: inline-block;
+    line-height: 42px;
+}
+
+section.slide .content a i {
+    font-size: 42px;
+}
+
+section.slide .image {
+    width: 50%;
+    /*
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+    */
+}
+
+section.slide .image img {
+    background-color: chocolate;
+    width: 100%;
+}
+
+
+/**
+Story
+*/
+.story {
+    padding-top: 100px;
+    display: flex;
+}
+
+.story .image {
+    flex: 1 0;
+}
+
+.story .image img {
+    width: 640px;
+}
+
+.story .content {
+    flex: 1 0;
+    margin-left: 100px;
+}
+
+.story .content .subtitle {
+    display: flex;
+}
+
+.story .content h4 {
+    font-size: 18px;
+}
+
+.story .content h4::before {
+    content: "";
+    display: inline-block;
+    border-top: 2px solid black;
+    width: 20px;
+    margin-right: 16px;
+    vertical-align: middle;
+}
+
+.story .content h2 {
+    font-size: 36px;
+}
+
+.story .content .actions {
+    background-color: #efefef;
+    padding: 20px;
+}
+
+.story .content .actions>button {
+    padding: 10px 20px;
+    margin-right: 20px;
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #2d2d2d;
+}
+
+.story .content .actions button:hover {
+    color: #155bd5;
+}
+
+.story .content .actions button:nth-child(3) {
+    background-color: #155bd5;
+    color: white;
+}
+
+.story .content p {
+    color: #6d6d6d;
+    line-height: 24px;
+}
