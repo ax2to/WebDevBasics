@@ -184,7 +184,7 @@ Story
     color: #155bd5;
 }
 
-.story .content .actions button:nth-child(3) {
+.story .content .actions button.active {
     background-color: #155bd5;
     color: white;
 }
@@ -192,4 +192,21 @@ Story
 .story .content p {
     color: #6d6d6d;
     line-height: 24px;
+}
+
+.story .content #content-our-vision,
+.story .content #content-our-story {
+    display: none;
+}
+
+#content-who-we-are {
+    background-color: #155bd5;
+}
+
+#content-our-vision {
+    background-color: #60d84d;
+}
+
+#content-our-story {
+    background-color: #fd8607;
 }
