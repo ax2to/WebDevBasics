@@ -6,3 +6,5 @@ Inglés:
 "WebDevBasics: An Introductory Web Development Course for Beginners. This repository houses all the materials, code examples, and resources needed to master the basics of web development. Specially tailored for beginners, each module is structured to guide students through the foundational aspects of HTML, CSS, and JavaScript, providing a solid grounding for their web programming journey."
 
 [HTML](01-HTML/docs/index.md)
+CSS
+[Javascript](03-Javascript/docs/index.md)
