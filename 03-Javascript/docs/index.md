@@ -1,5 +1,15 @@
+# Javascript
+
 ## Tema 1: Introducción a JavaScript
-- ¿Qué es JavaScript?
+### ¿Qué es JavaScript?
+JavaScript es un lenguaje de programación que se utiliza en el desarrollo web para hacer que las páginas sean interactivas y dinámicas. Es un componente fundamental de la web moderna y se ejecuta en el navegador del usuario, lo que permite crear experiencias web más ricas y personalizadas.
+
+- **Lenguaje de alto nivel:** Esto significa que JavaScript está diseñado para que sea fácil de entender y escribir para los humanos. No necesitas preocuparte por los detalles técnicos de cómo funcionan las computadoras para empezar a escribir código en JavaScript.
+
+- **Interpretado:** JavaScript es un lenguaje interpretado, lo que significa que el código JavaScript se ejecuta línea por línea en el navegador web. No es necesario compilar el código antes de ejecutarlo, lo que hace que el desarrollo sea más rápido y flexible.
+
+- **Orientado a objetos:** JavaScript es un lenguaje orientado a objetos, lo que significa que se basa en el concepto de objetos y clases. Un objeto en JavaScript es una colección de datos y funciones que trabajan juntos para realizar una tarea específica.
+
 - Historia y evolución de JavaScript
 - ¿Por qué aprender JavaScript?
 - Entorno de desarrollo: editores de texto, navegadores y consola del navegador.
