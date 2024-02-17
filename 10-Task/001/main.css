@@ -16,9 +16,19 @@ body {
 
 header,
 section.slide,
-section.story {
+section.story,
+section.services,
+section.promo {
     width: 1280px;
     margin: 0 auto;
+}
+
+h2 {
+    font-size: 36px;
+}
+
+p {
+    color: #6d6d6d;
 }
 
 /**
@@ -126,7 +136,7 @@ section.slide .image img {
 Story
 */
 .story {
-    padding-top: 100px;
+    padding: 100px 0;
     display: flex;
 }
 
@@ -160,9 +170,10 @@ Story
     vertical-align: middle;
 }
 
+/*
 .story .content h2 {
     font-size: 36px;
-}
+}*/
 
 .story .content .actions {
     background-color: #efefef;
@@ -199,8 +210,9 @@ Story
     display: none;
 }
 
+/*
 #content-who-we-are {
-    background-color: #155bd5;
+     background-color: #155bd5;
 }
 
 #content-our-vision {
@@ -209,4 +221,111 @@ Story
 
 #content-our-story {
     background-color: #fd8607;
+}*/
+
+/**
+Services
+*/
+.services {
+    text-align: center;
+    padding: 100px 0;
+}
+
+.services span {
+    color: #155bd5;
+    border: solid 2px #155bd5;
+    font-size: 14px;
+    padding: 8px 30px;
+    border-radius: 20px;
+}
+
+.services>p {
+    width: 520px;
+    margin: 16px auto;
+}
+
+.services .cards {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: left;
+}
+
+.services .cards .card {
+    border: solid 1px #efefef;
+    border-radius: 10px;
+    width: 364px;
+    margin: 10px;
+    padding: 20px;
+}
+
+.services .cards .card:hover {
+    box-shadow: 5px 5px 20px 0px rgba(145, 145, 145, 0.43);
+    -webkit-box-shadow: 5px 5px 20px 0px rgba(145, 145, 145, 0.43);
+    -moz-box-shadow: 5px 5px 20px 0px rgba(145, 145, 145, 0.43);
+}
+
+.services .cards .card:hover .icon {
+    color: white;
+    background-color: #155bd5;
+}
+
+.services .cards .card .icon {
+    display: inline-block;
+    border: solid 1px black;
+    padding: 10px;
+    font-size: 40px;
+    width: 49px;
+    text-align: center;
+    border-radius: 40px;
+    color: #155bd5;
+}
+
+.services .cards .card h4 {
+    font-size: 20px;
+    color: #1d1d1d;
+}
+
+/**
+Promo Video
+**/
+.promo {
+    text-align: center;
+    padding: 100px 0;
+}
+
+.promo span {
+    color: #155bd5;
+    border: solid 2px #155bd5;
+    font-size: 14px;
+    padding: 8px 30px;
+    border-radius: 20px;
+}
+
+.promo>p {
+    width: 520px;
+    margin: 16px auto;
+}
+
+.promo .video {
+    margin-top: 50px;
+    position: relative;
+}
+
+.promo .video .button {
+    position: absolute;
+    top: calc(50% - 40px);
+    left: calc(50% - 40px);
+    border-radius: 80px;
+    background-color: white;
+    color: #155bd5;
+}
+
+.promo .video .button i {
+    font-size: 80px;
+}
+
+.promo .video .button:hover {
+    color: white;
+    background-color: #155bd5;
+    cursor: pointer;
 }
