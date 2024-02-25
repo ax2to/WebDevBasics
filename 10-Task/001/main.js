@@ -18,6 +18,10 @@ document.addEventListener("DOMContentLoaded", () => {
         displayStoryContent("content-our-story")
         btnOurStory.className = 'active'
     })
+
+    // añadir un listener para el promo video
+    let btnPromoVideo = document.getElementById('btnPromoVideo')
+    btnPromoVideo.addEventListener('click', openPromoVideo)
 });
 
 function displayStoryContent(elementId) {
@@ -43,4 +47,22 @@ function displayStoryContent(elementId) {
     // acceder al elemento
     let divToDisplay = document.getElementById(elementId)
     divToDisplay.style.display = "block"
+}
+
+function openPromoVideo() {
+    let overlay = document.getElementById('overlay')
+    let video = document.getElementById('divPromoVideo')
+
+    overlay.addEventListener('click', closePromoVideo)
+
+    overlay.style.display = 'block'
+    video.style.display = 'block'
+}
+
+function closePromoVideo() {
+    let overlay = document.getElementById('overlay')
+    let video = document.getElementById('divPromoVideo')
+
+    overlay.style.display = 'none'
+    video.style.display = 'none'
 }

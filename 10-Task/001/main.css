@@ -18,7 +18,8 @@ header,
 section.slide,
 section.story,
 section.services,
-section.promo {
+section.promo,
+section.our-work {
     width: 1280px;
     margin: 0 auto;
 }
@@ -29,6 +30,17 @@ h2 {
 
 p {
     color: #6d6d6d;
+}
+
+#overlay {
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0.8;
+    display: none;
 }
 
 /**
@@ -256,6 +268,7 @@ Services
     width: 364px;
     margin: 10px;
     padding: 20px;
+    text-decoration: none;
 }
 
 .services .cards .card:hover {
@@ -328,4 +341,65 @@ Promo Video
     color: white;
     background-color: #155bd5;
     cursor: pointer;
+}
+
+.promo #divPromoVideo {
+    display: none;
+    position: fixed;
+    top: calc(50% - 157px);
+    left: calc(50% - 280px);
+    z-index: 1;
+    width: 560px;
+    height: 315px;
+}
+
+/*
+    Section Our Work
+*/
+.our-work {
+    padding: 100px 0;
+    text-align: center;
+}
+
+.our-work span {
+    color: #155bd5;
+    border: solid 2px #155bd5;
+    font-size: 14px;
+    padding: 8px 30px;
+    border-radius: 20px;
+}
+
+.our-work>p {
+    width: 520px;
+    margin: 16px auto;
+}
+
+.our-work ul {
+    list-style: none;
+    margin: 50px 0;
+}
+
+.our-work ul li {
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 0 30px;
+}
+
+.our-work ul li.active,
+.our-work ul li:hover {
+    color: #155bd5;
+    border-bottom: 5px solid #155bd5;
+    padding-bottom: 10px;
+}
+
+.our-work ul li a {
+    text-decoration: none;
+    color: #1d1d1d;
+}
+
+.our-work ul li.active a,
+.our-work ul li:hover a {
+    color: #155bd5;
 }
