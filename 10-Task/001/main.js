@@ -22,6 +22,24 @@ document.addEventListener("DOMContentLoaded", () => {
     // añadir un listener para el promo video
     let btnPromoVideo = document.getElementById('btnPromoVideo')
     btnPromoVideo.addEventListener('click', openPromoVideo)
+
+    /**
+     * Seleccion de Trabajos
+     */
+    let btnResearch = document.getElementById("btnResearch")
+    btnResearch.addEventListener('click', showResearchWorks)
+
+    let btnPlanning = document.getElementById("btnPlanning")
+    btnPlanning.addEventListener('click', showPanningWorks)
+
+    let btnMarketing = document.getElementById("btnMarketing")
+    btnMarketing.addEventListener('click', showMarketingWorks)
+
+    let btnBranding = document.getElementById("btnBranding")
+    btnBranding.addEventListener('click', showBrandinggWorks)
+
+    let btnAllWorks = document.getElementById("btnAllWorks")
+    btnAllWorks.addEventListener('click', showAllWorks)
 });
 
 function displayStoryContent(elementId) {
@@ -65,4 +83,97 @@ function closePromoVideo() {
 
     overlay.style.display = 'none'
     video.style.display = 'none'
+}
+
+function showResearchWorks(event) {
+    // evitar comportamiento por defecto
+    event.preventDefault()
+
+    // setup
+    setUpWorksButton()
+
+    // mostrar el trabajo "Web development"
+    document.getElementById('divWebDevelopment').style.display = 'block'
+
+    // añadir la seccion actual
+    document.getElementById('btnResearch').parentNode.classList.add('active')
+}
+
+function showPanningWorks(event) {
+    // evitar comportamiento por defecto
+    event.preventDefault()
+
+    // setup
+    setUpWorksButton()
+
+    // mostrar el trabajo "Digital Marketing"
+    document.getElementById('divDigitalMarketing').style.display = 'block'
+
+    // añadir la seccion actual
+    document.getElementById('btnPlanning').parentNode.classList.add('active')
+}
+
+function showMarketingWorks(event) {
+    // evitar comportamiento por defecto
+    event.preventDefault()
+
+    // setup
+    setUpWorksButton()
+
+    // mostrar el trabajo "App Development" "Product Design"
+    document.getElementById('divAppDevelopment').style.display = 'block'
+    document.getElementById('divProductDesign').style.display = 'block'
+
+    // añadir la seccion actual
+    document.getElementById('btnMarketing').parentNode.classList.add('active')
+}
+
+function showBrandinggWorks(event) {
+    // evitar comportamiento por defecto
+    event.preventDefault()
+
+    // setup
+    setUpWorksButton()
+
+    // mostrar el trabajo "divGraphicDesign" "divSEOServices"
+    document.getElementById('divGraphicDesign').style.display = 'block'
+    document.getElementById('divSEOServices').style.display = 'block'
+
+    // añadir la seccion actual
+    document.getElementById('btnBranding').parentNode.classList.add('active')
+}
+
+function showAllWorks() {
+    // evitar comportamiento por defecto
+    event.preventDefault()
+
+    // setup
+    setUpWorksButton()
+
+    // mostrar el todos los trabajos
+    document.getElementById('divGraphicDesign').style.display = 'block'
+    document.getElementById('divWebDevelopment').style.display = 'block'
+    document.getElementById('divAppDevelopment').style.display = 'block'
+    document.getElementById('divDigitalMarketing').style.display = 'block'
+    document.getElementById('divSEOServices').style.display = 'block'
+    document.getElementById('divProductDesign').style.display = 'block'
+
+    // añadir la seccion actual
+    document.getElementById('btnAllWorks').parentNode.classList.add('active')
+}
+
+function setUpWorksButton() {
+    // ocultar todos los elements (trabajos)
+    document.getElementById('divGraphicDesign').style.display = 'none'
+    document.getElementById('divWebDevelopment').style.display = 'none'
+    document.getElementById('divAppDevelopment').style.display = 'none'
+    document.getElementById('divDigitalMarketing').style.display = 'none'
+    document.getElementById('divSEOServices').style.display = 'none'
+    document.getElementById('divProductDesign').style.display = 'none'
+
+    // quitar la seleccion en el menu
+    let buttons = document.querySelectorAll(".our-work ul li")
+    for (var i = 0; i < buttons.length; i++) {
+        buttons[i].classList.remove('active')
+    }
 }

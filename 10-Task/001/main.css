@@ -403,3 +403,83 @@ Promo Video
 .our-work ul li:hover a {
     color: #155bd5;
 }
+
+.our-work .cards {
+    display: flex;
+    flex-wrap: wrap;
+    /*
+    justify-content: flex-start;
+    justify-content: flex-end;
+    justify-content: center;
+    justify-content: space-between;
+    justify-content: space-around;
+    justify-content: space-evenly;
+    */
+    padding: 0 50px;
+}
+
+.our-work .cards .card {
+    width: 350px;
+    text-align: left;
+    margin-bottom: 20px;
+    margin-right: 40px;
+}
+
+.our-work .cards .card h4 {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.our-work .cards .card .image {
+    position: relative;
+}
+
+.our-work .cards .card .image img {
+    border-radius: 10px;
+}
+
+.our-work .cards .card .image .background {
+    background-color: white;
+    opacity: 0.8;
+    width: 330px;
+    height: 260px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1;
+    border-radius: 10px;
+    display: none;
+}
+
+.our-work .cards .card:hover .image .background {
+    display: block;
+}
+
+
+.our-work .cards .card .image .icons {
+    position: absolute;
+    top: calc(50% - 28px);
+    left: calc(50% - 68px);
+    z-index: 2;
+    display: none;
+}
+
+.our-work .cards .card:hover .image .icons {
+    display: block;
+}
+
+.our-work .cards .card .image .icon {
+    background-color: #155bd5;
+    padding: 10px;
+    display: inline-block;
+    color: white;
+    font-size: 30px;
+    border-radius: 10px;
+    margin-right: 10px;
+    width: 36px;
+    text-align: center;
+}
+
+.our-work .cards .card .image .icon:hover {
+    background-color: #0c48b1;
+}
