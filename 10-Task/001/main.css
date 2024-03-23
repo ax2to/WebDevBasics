@@ -21,7 +21,9 @@ section.services,
 section.promo,
 section.our-work,
 section.our-team,
-section.testimonials {
+section.testimonials,
+section.blog,
+section.clients {
     width: 1280px;
     margin: 0 auto;
 }
@@ -722,4 +724,123 @@ Promo Video
 .testimonials .controls .active {
     width: 30px;
     background-color: #0c48b1;
+}
+
+/*
+    Section Blog
+*/
+.blog {
+    padding: 100px 0;
+    text-align: center;
+}
+
+.blog span {
+    color: #155bd5;
+    border: solid 2px #155bd5;
+    font-size: 14px;
+    padding: 8px 30px;
+    border-radius: 20px;
+}
+
+.blog>p {
+    width: 520px;
+    margin: 16px auto;
+}
+
+.blog .cards {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 100px;
+}
+
+.blog .cards .card {
+    width: 400px;
+}
+
+.blog .cards .card .image {
+    position: relative;
+}
+
+.blog .cards .card .image>img {
+    width: 400px;
+}
+
+.blog .cards .card .image .author {
+    display: flex;
+    background-color: #155bd5;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    padding: 5px;
+    color: white;
+    font-size: 12px;
+    border-radius: 20px;
+}
+
+.blog .cards .card .image .author img {
+    border-radius: 50%;
+    height: 35px;
+}
+
+.blog .cards .card .image .author div {
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-right: 10px;
+    text-transform: uppercase;
+}
+
+.blog .cards .card h4 {
+    font-size: 24px;
+    text-align: left;
+}
+
+.blog .cards .card p {
+    font-size: 16px;
+    text-align: left;
+}
+
+/*
+    Section Clients
+*/
+.clients {
+    padding: 100px 0;
+    text-align: center;
+}
+
+.clients span {
+    color: #155bd5;
+    border: solid 2px #155bd5;
+    font-size: 14px;
+    padding: 8px 30px;
+    border-radius: 20px;
+}
+
+.clients>p {
+    width: 520px;
+    margin: 16px auto;
+}
+
+.clients .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 100px;
+}
+
+.clients .cards .card {
+    width: 300px;
+    padding: 50px;
+    background-color: white;
+    border: 1px solid #e6e6e6;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.clients .cards .card:hover {
+    box-shadow: 4px 5px 12px -3px rgba(135, 135, 135, 0.72);
+}
+
+
+#map {
+    height: 600px;
 }

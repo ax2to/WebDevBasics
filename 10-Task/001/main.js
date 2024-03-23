@@ -51,6 +51,11 @@ document.addEventListener("DOMContentLoaded", () => {
             moveTestimonials(index)
         })
     }
+
+    /**
+     * Seccion de contactanos
+     */
+    initMap();
 });
 
 function displayStoryContent(elementId) {
@@ -216,4 +221,34 @@ function moveTestimonials(index) {
     // añadir clase activa al controlador
     index++
     document.querySelector('.testimonials .controls span:nth-child(' + index + ')').classList.add('active')
+    // '.testimonials .controls span:nth-child(1)
+    // '.testimonials .controls span:nth-child(2)
+    // '.testimonials .controls span:nth-child(3)
+}
+
+// Initialize and add the map
+let map;
+
+async function initMap() {
+    // The location of Uluru
+    const position = { lat: -12.059769, lng: -77.119688 };
+
+    // Request needed libraries.
+    //@ts-ignore
+    const { Map } = await google.maps.importLibrary("maps");
+    const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
+
+    // The map, centered at Uluru
+    map = new Map(document.getElementById("map"), {
+        zoom: 18,
+        center: position,
+        mapId: "DEMO_MAP_ID",
+    });
+
+    // The marker, positioned at Uluru
+    const marker = new AdvancedMarkerElement({
+        map: map,
+        position: position,
+        title: "Testing",
+    });
 }
