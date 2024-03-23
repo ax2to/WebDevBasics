@@ -40,6 +40,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let btnAllWorks = document.getElementById("btnAllWorks")
     btnAllWorks.addEventListener('click', showAllWorks)
+
+    /**
+     * Controles para testtimonios
+     */
+    let buttons = document.querySelectorAll('.testimonials .controls span')
+    for (var i = 0; i < buttons.length; i++) {
+        let index = i;
+        buttons[i].addEventListener('click', function () {
+            moveTestimonials(index)
+        })
+    }
 });
 
 function displayStoryContent(elementId) {
@@ -176,4 +187,33 @@ function setUpWorksButton() {
     for (var i = 0; i < buttons.length; i++) {
         buttons[i].classList.remove('active')
     }
+}
+
+function moveTestimonials(index) {
+    console.log(index)
+    // quitar la clase activa a los cards existentes
+    let actives = document.querySelectorAll('.testimonials .active')
+    for (var i = 0; i < actives.length; i++) {
+        actives[i].classList.remove('active')
+    }
+
+    // añadir la clase activa a los siguientes cards
+    // index = 0 mostrar 1 y 2
+    // index = 1 mostrar 3 y 4
+    // index = 2 mostrar 5
+    if (index == 0) {
+        document.querySelector('.testimonials .cards .card:nth-child(1)').classList.add('active')
+        document.querySelector('.testimonials .cards .card:nth-child(2)').classList.add('active')
+    }
+    if (index == 1) {
+        document.querySelector('.testimonials .cards .card:nth-child(3)').classList.add('active')
+        document.querySelector('.testimonials .cards .card:nth-child(4)').classList.add('active')
+    }
+    if (index == 2) {
+        document.querySelector('.testimonials .cards .card:nth-child(5)').classList.add('active')
+    }
+
+    // añadir clase activa al controlador
+    index++
+    document.querySelector('.testimonials .controls span:nth-child(' + index + ')').classList.add('active')
 }
