@@ -23,7 +23,8 @@ section.our-work,
 section.our-team,
 section.testimonials,
 section.blog,
-section.clients {
+section.clients,
+section.contact {
     width: 1280px;
     margin: 0 auto;
 }
@@ -843,4 +844,141 @@ Promo Video
 
 #map {
     height: 600px;
+}
+
+/*
+    Section Contact
+*/
+
+.contact {
+    display: flex;
+    margin-top: 100px !important;
+    position: relative;
+}
+
+.contact .data .cards {
+    margin-bottom: 120px;
+}
+
+.contact .data .cards .card {
+    border: 1px solid #cfcfcf;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    padding: 20px;
+    display: flex;
+    width: 360px;
+}
+
+.contact .data .cards .card:hover {
+    box-shadow: 4px 5px 12px -3px rgba(135, 135, 135, 0.72);
+}
+
+.contact .data .cards .card .icon {
+    background-color: #155bd5;
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    color: white;
+    text-align: center;
+
+}
+
+.contact .data .cards .card .icon i {
+    margin-top: 10px;
+}
+
+.contact .data .cards .card .content {
+    margin-left: 20px;
+}
+
+.contact .data .cards .card .content h5 {
+    margin: 0;
+    color: #155bd5;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.contact .data .cards .card .content p {
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.contact .form {
+    margin-left: 40px;
+    border: 1px solid #cfcfcf;
+    padding: 50px 40px;
+    position: absolute;
+    width: 740px;
+    top: 0;
+    right: 0;
+    background-color: white;
+    border-radius: 10px;
+    z-index: 100;
+}
+
+.contact .form:hover {
+    box-shadow: 4px 5px 12px -3px rgba(135, 135, 135, 0.72);
+}
+
+.contact .form p:nth-child(1) {
+    font-size: 20px;
+    color: #155bd5;
+    font-weight: bold;
+    margin: 0;
+    text-align: center;
+}
+
+.contact .form h3 {
+    font-size: 36px;
+    margin: 0;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.contact .form p:nth-child(3) {
+    text-align: center;
+    margin: 0;
+}
+
+.contact .form form {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.contact .form form input {
+    width: calc(50% - 82px);
+    margin: 20px;
+    padding: 20px;
+    border-radius: 40px;
+    border: 1px solid #cfcfcf;
+    font-size: 16px;
+}
+
+.contact .form form textarea {
+    width: 100%;
+    height: 120px;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 40px;
+    border: 1px solid #cfcfcf;
+    font-size: 16px;
+}
+
+.contact .form form div {
+    width: 100%;
+    text-align: center;
+}
+
+.contact .form form button {
+    border-radius: 20px;
+    background-color: #155bd5;
+    color: white;
+    padding: 12px 24px;
+    text-transform: uppercase;
+    border: none;
+    font-size: 16px;
 }
