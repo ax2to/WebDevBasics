@@ -22,3 +22,5 @@ Entender y aplicar la semántica en HTML es crucial para crear páginas web que 
 - `<aside>`: Se utiliza para contenido secundario o complementario, como barras laterales con enlaces relacionados o anuncios.
 
 El uso adecuado de estos elementos semánticos no solo ayuda a los motores de búsqueda a comprender mejor el contenido de tu página, sino que también mejora la accesibilidad y la experiencia del usuario al proporcionar una estructura clara y significativa.
+
+just a test update.
