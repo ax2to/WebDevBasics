@@ -993,37 +993,73 @@ section.footer {
     display: flex;
     justify-content: space-between;
 }
-section.footer .links {
-    display: flex;
-}
-section.footer .links li {
-    margin: 0px 0px 12px;
-}
-section.footer .about{
-    width: 296px;
+
+section.footer .about {
+    width: 386px;
     height: 243px;
 }
+
 section.footer .about a {
     text-decoration: none;
     color: #155bd5;
 }
 
+section.footer .links {
+    display: flex;
+    width: 196px;
+}
+
+section.footer .links li {
+    margin: 0px 0px 12px;
+}
+
 section.footer .links .solutions h5,
 section.footer .links .support h5,
-section.footer .subscribe h5{
+section.footer .subscribe h5 {
     font-size: 20px;
     margin: 0px 0px 35px;
 }
+
 section.footer .links .solutions,
 section.footer .links .support,
-section.footer .subscribe{
+section.footer .subscribe {
     padding: 0px 12px;
 }
+
 section.footer .links ul {
     list-style: none;
     padding: 0px;
 }
+
 section.footer .links a {
     text-decoration: none;
     color: #6D6D6D
+}
+
+section.footer .subscribe {
+    width: 336px;
+}
+
+section.footer .subscribe form {
+    position: relative;
+}
+
+section.footer .subscribe form input {
+    border: 1px solid #e0e0e0;
+    padding: 15px;
+    font-size: 18px;
+    width: 306px;
+    border-radius: 10px;
+}
+
+section.footer .subscribe form button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    border: none;
+    background-color: #155bd5;
+    padding: 12px;
+    color: white;
+    font-size: 16px;
+    border-radius: 10px;
 }
