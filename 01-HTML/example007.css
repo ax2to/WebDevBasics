@@ -1,0 +1,84 @@
+body {
+    font-size: 20px;
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+}
+
+header,
+main {
+    background-color: rgb(17, 94, 210, 255);
+    padding: 0 100px;
+}
+
+header {
+    /*background-color: rgb(17,94,210,255);*/
+    padding-top: 20px;
+    padding-bottom: 60px;
+}
+
+header .logo {
+    display: inline-block;
+}
+
+header .menu {
+    display: inline-block;
+    height: 60px;
+    vertical-align: top;
+}
+
+header .menu ul {
+    margin: 0;
+    list-style: none;
+    margin-top: 18.5px;
+}
+
+header .menu ul li {
+    display: inline;
+    margin-right: 20px;
+    color: white;
+}
+
+header .menu ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+header .menu ul li i {
+    font-size: 2em;
+}
+
+main {
+    /* background-color: rgb(17,94,210,255);*/
+    padding-bottom: 60px;
+}
+
+main .content {
+    color: white;
+    display: inline-block;
+    vertical-align: top;
+    width: 50%;
+}
+
+main .content h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+main .content button {
+    padding: 10px 20px;
+    color: blue;
+    margin-right: 20px;
+}
+
+main .content a {
+    color: white;
+    text-decoration: none;
+}
+
+main .image {
+    display: inline-block;
+}
+
+main .image img {
+    width: 400px;
+}

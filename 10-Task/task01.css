@@ -1,0 +1,75 @@
+body {
+    font-size: 16px;
+    margin: 0;
+}
+
+header,
+section {
+    padding: 0 100px;
+}
+
+header {
+    padding-top: 40px;
+    background-color: blue;
+}
+
+header .logo {
+    display: inline-block;
+}
+
+header .menu {
+    display: inline-block;
+    height: 59px;
+    vertical-align: top;
+}
+
+header .menu ul {
+    display: inline-block;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+header .menu ul li {
+    display: inline-block;
+    margin-right: 16px;
+}
+
+header .menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+section {
+    background-color: blue;
+    padding-bottom: 100px;
+}
+
+section .content {
+    display: inline-block;
+    vertical-align: top;
+    color: white;
+    width: 500px;
+}
+
+section .content h1 {
+    margin: 0;
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+section .content .actions {
+    margin-top: 20px;
+}
+
+section .content .actions a {
+    color: white;
+    text-decoration: none;
+}
+
+section .image {
+    display: inline-block;
+}
