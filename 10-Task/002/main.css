@@ -1,3 +1,46 @@
+:root {
+    --primary-color: #155bd5;
+    --secondary-color: #6d6d6d;
+    --main-max-width: 1280px;
+    --section-gap: 100px;
+    --h1-size: 44px;
+}
+
+@media (max-width: 1360px) {
+    :root {
+        --main-max-width: 1000px;
+        --section-gap: 50px;
+    }
+}
+
+@media (max-width: 1200px) {
+    :root {
+        --main-max-width: 784px;
+        --section-gap: 20px;
+        --h1-size: 32px;
+    }
+}
+
+@media (max-width: 860px) {
+    section {
+        padding: 40px;
+    }
+
+    section.slide {
+        display: block !important;
+    }
+
+    section.slide .content {
+        width: 100% !important;
+        margin-bottom: var(--section-gap);
+    }
+
+    section.slide .image {
+        width: 100% !important;
+    }
+}
+
+
 /**
 General
 */
@@ -7,12 +50,21 @@ body {
     min-width: 320px;
 }
 
+section {
+    max-width: var(--main-max-width);
+    margin: 0 auto;
+}
+
 .container-top {
-    background-color: #155bd5;
+    background-color: var(--primary-color);
 }
 
 .container-gray {
     background-color: #fafafa;
+}
+
+h1 {
+    font-size: var(--h1-size);
 }
 
 h2 {
@@ -40,12 +92,14 @@ header
 .container-header {
     position: fixed;
     top: 0;
-    background-color: #155bd5;
+    background-color: var(--primary-color);
     width: 100%;
     z-index: 11;
 }
 
 header {
+    max-width: var(--main-max-width);
+    margin: 0 auto;
     padding: 40px;
     display: flex;
 }
@@ -103,10 +157,11 @@ header .menu ul li a {
 Slide
 */
 section.slide {
-    padding-top: 223px;
+    padding-top: calc(123px + var(--section-gap));
     color: white;
     display: flex;
     padding-bottom: 100px;
+    gap: 40px;
 }
 
 section.slide .content {
@@ -116,11 +171,11 @@ section.slide .content {
 
 section.slide .content h1 {
     margin: 0;
-    font-size: 44px;
 }
 
 section.slide .content p {
     margin: 40px 0;
+    color: white;
 }
 
 section.slide .content button {
