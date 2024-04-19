@@ -1079,6 +1079,41 @@ Promo Video
     height: 600px;
 }
 
+@media (max-width: 1360px) {
+    .container-gray .clients .cards .card{
+        padding: 20px;
+    }
+    .clients .cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        width: 100%;
+        gap: 10px;
+    }
+}
+
+
+@media (max-width: 860px) {
+    .container-gray .clients .cards .card{
+        padding: 10px;
+    }
+    .clients .cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+    }
+}
+
+@media (max-width: 520px) {
+    .clients .cards {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+    .container-gray .clients>p {
+        width: 100%;
+    }
+}
+
 /*
     Section Contact
 */
