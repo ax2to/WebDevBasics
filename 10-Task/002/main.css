@@ -933,6 +933,14 @@ Promo Video
     margin-top: 20px;
 }
 
+.testimonials .controls.by1 {
+    display: none;
+}
+
+.testimonials .controls.by2 {
+    display: block;
+}
+
 .testimonials .controls span {
     display: inline-block;
     background-color: #94b8f5;
@@ -955,8 +963,12 @@ Promo Video
 }
 
 @media (max-width: 860px) {
-    .testimonials .controls .hide {
-        display: inline-block;
+    .testimonials .controls.by1 {
+        display: block;
+    }
+
+    .testimonials .controls.by2 {
+        display: none;
     }
 }
 
@@ -977,18 +989,19 @@ Promo Video
 }
 
 .blog>p {
-    width: 520px;
+    max-width: 520px;
     margin: 16px auto;
 }
 
 .blog .cards {
-    display: flex;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
     margin-top: 100px;
 }
 
 .blog .cards .card {
-    width: 400px;
+    width: 100%;
 }
 
 .blog .cards .card .image {
@@ -996,7 +1009,7 @@ Promo Video
 }
 
 .blog .cards .card .image>img {
-    width: 400px;
+    width: 100%;
 }
 
 .blog .cards .card .image .author {
@@ -1033,6 +1046,24 @@ Promo Video
     text-align: left;
 }
 
+@media (max-width: 1360px) {
+    .blog .cards .card h4 {
+        margin: 20px 0;
+    }
+}
+
+@media (max-width: 1200px) {
+    .blog .cards {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 860px) {
+    .blog .cards {
+        grid-template-columns: 1fr;
+    }
+}
+
 /*
     Section Clients
 */
@@ -1057,8 +1088,9 @@ Promo Video
 .clients .cards {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     margin-top: 100px;
+    gap: 20px;
 }
 
 .clients .cards .card {
@@ -1066,7 +1098,6 @@ Promo Video
     padding: 50px;
     background-color: white;
     border: 1px solid #e6e6e6;
-    margin-bottom: 20px;
     border-radius: 5px;
 }
 
@@ -1080,22 +1111,28 @@ Promo Video
 }
 
 @media (max-width: 1360px) {
-    .container-gray .clients .cards .card{
-        padding: 20px;
+    .container-gray .clients .cards .card {
+        padding: 20px 0;
     }
+
     .clients .cards {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         width: 100%;
         gap: 10px;
     }
+
+    .clients .cards .card {
+        width: 100%;
+    }
 }
 
 
 @media (max-width: 860px) {
-    .container-gray .clients .cards .card{
-        padding: 10px;
+    .container-gray .clients .cards .card {
+        padding: 10px 0;
     }
+
     .clients .cards {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -1109,6 +1146,7 @@ Promo Video
         grid-template-columns: 1fr;
         justify-items: center;
     }
+
     .container-gray .clients>p {
         width: 100%;
     }
