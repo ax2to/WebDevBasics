@@ -60,6 +60,28 @@ document.addEventListener("DOMContentLoaded", () => {
         })
     }
 
+    // control de cambio de pantalla en testimonios
+    window.addEventListener("resize",function(){
+        console.log('resize screen')
+        console.log(window.screen.width)
+
+        // si el tamaño de la pantalla es menor o igual que 860 
+        // entonces ocultar el segundo elemento activo
+        if(window.screen.width <= 860){
+            console.log('ocultar segundo elemento')
+            let secondElements = document.querySelectorAll('.testimonials .cards .active:nth-child(2)')
+            for (var i = 0; i < secondElements.length; i++) {
+                secondElements[i].classList.remove('active')
+            }
+        }else{
+            console.log('mostrar segundo elemento')
+            let secondElements = document.querySelectorAll('.testimonials .cards .card:nth-child(2)')
+            for (var i = 0; i < secondElements.length; i++) {
+                secondElements[i].classList.add('active')
+            }
+        }
+    })
+
     /**
      * Seccion de contactanos
      */
@@ -247,7 +269,7 @@ function moveTestimonialsBy2(index) {
 
     // añadir clase activa al controlador
     index++
-    document.querySelector('.testimonials .controls span:nth-child(' + index + ')').classList.add('active')
+    document.querySelector('.testimonials .controls.by2 span:nth-child(' + index + ')').classList.add('active')
     // '.testimonials .controls span:nth-child(1)
     // '.testimonials .controls span:nth-child(2)
     // '.testimonials .controls span:nth-child(3)
