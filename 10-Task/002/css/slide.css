@@ -1,0 +1,58 @@
+
+/**
+Slide
+*/
+section.slide {
+    color: white;
+    display: flex;
+    padding-bottom: 100px;
+    gap: 40px;
+}
+
+section.slide .content {
+    width: 50%;
+    align-self: center;
+}
+
+section.slide .content h1 {
+    margin: 0;
+}
+
+section.slide .content p {
+    margin: 40px 0;
+    color: white;
+}
+
+section.slide .content button {
+    font-size: 16px;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    margin-right: 20px;
+    vertical-align: top;
+}
+
+section.slide .content a {
+    color: white;
+    text-decoration: none;
+    height: 42px;
+    display: inline-block;
+    line-height: 42px;
+}
+
+section.slide .content a i {
+    font-size: 42px;
+}
+
+section.slide .image {
+    width: 50%;
+    /*
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+    */
+}
+
+section.slide .image img {
+    background-color: chocolate;
+    width: 100%;
+}

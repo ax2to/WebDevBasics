@@ -1,0 +1,134 @@
+
+/**
+Story
+*/
+.story {
+    padding: var(--section-gap) 0;
+    display: flex;
+    flex-direction: row;
+}
+
+.story .image {
+    width: 50%;
+}
+
+.story .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.story .content {
+    width: 50%;
+    padding-left: var(--section-gap);
+    box-sizing: border-box;
+}
+
+.story .content .subtitle {
+    display: flex;
+}
+
+.story .content h4::before {
+    content: "";
+    display: inline-block;
+    border-top: 2px solid black;
+    width: 20px;
+    margin-right: 16px;
+    vertical-align: middle;
+}
+
+
+/*
+.story .content h2 {
+    font-size: 36px;
+}*/
+
+.story .content .actions {
+    background-color: #efefef;
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.story .content .actions>button {
+    padding: 10px 20px;
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #2d2d2d;
+}
+
+.story .content .actions button:hover {
+    color: #155bd5;
+}
+
+.story .content .actions button.active {
+    background-color: #155bd5;
+    color: white;
+}
+
+.story .content p {
+    color: #6d6d6d;
+    line-height: 24px;
+}
+
+.story .content #content-our-vision,
+.story .content #content-our-story {
+    display: none;
+}
+
+/*
+#content-who-we-are {
+     background-color: #155bd5;
+}
+
+#content-our-vision {
+    background-color: #60d84d;
+}
+
+#content-our-story {
+    background-color: #fd8607;
+}*/
+
+@media (max-width: 1360px) {
+    .story {
+        & .content {
+            & .actions {
+                flex-direction: column;
+            }
+        }
+    }
+}
+
+@media (max-width: 860px) {
+    .story {
+        flex-direction: column;
+        padding: var(--section-gap) 20px;
+
+        & .image {
+            width: 100%;
+        }
+
+        & .content {
+            width: 100%;
+            padding: 0;
+
+            & .actions {
+                flex-direction: column;
+            }
+        }
+    }
+}
+
+@media (max-width: 520px) {
+    .story {
+        & .content {
+            & .actions {
+                flex-direction: column;
+            }
+        }
+    }
+}

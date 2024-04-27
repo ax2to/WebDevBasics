@@ -1,23 +1,9 @@
+import { storyButtonsHandler } from "./story.js";
+
 // listener escucha cuando la estructura de la pagina se cargado
 document.addEventListener("DOMContentLoaded", () => {
-    // seleccionar el boton
-    let btnWhoWeAre = document.getElementById("btnWhoWeAre")
-    let btnOurVision = document.getElementById("btnOurVision")
-    let btnOurStory = document.getElementById("btnOurStory")
 
-    // añadir un listener para el evento click
-    btnWhoWeAre.addEventListener("click", function () {
-        displayStoryContent("content-who-we-are")
-        btnWhoWeAre.className = 'active'
-    })
-    btnOurVision.addEventListener("click", function () {
-        displayStoryContent("content-our-vision")
-        btnOurVision.className = 'active'
-    })
-    btnOurStory.addEventListener("click", function () {
-        displayStoryContent("content-our-story")
-        btnOurStory.className = 'active'
-    })
+    storyButtonsHandler();
 
     // añadir un listener para el promo video
     let btnPromoVideo = document.getElementById('btnPromoVideo')
@@ -61,19 +47,19 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // control de cambio de pantalla en testimonios
-    window.addEventListener("resize",function(){
+    window.addEventListener("resize", function () {
         console.log('resize screen')
         console.log(window.screen.width)
 
         // si el tamaño de la pantalla es menor o igual que 860 
         // entonces ocultar el segundo elemento activo
-        if(window.screen.width <= 860){
+        if (window.screen.width <= 860) {
             console.log('ocultar segundo elemento')
             let secondElements = document.querySelectorAll('.testimonials .cards .active:nth-child(2)')
             for (var i = 0; i < secondElements.length; i++) {
                 secondElements[i].classList.remove('active')
             }
-        }else{
+        } else {
             console.log('mostrar segundo elemento')
             let secondElements = document.querySelectorAll('.testimonials .cards .card:nth-child(2)')
             for (var i = 0; i < secondElements.length; i++) {
@@ -87,31 +73,6 @@ document.addEventListener("DOMContentLoaded", () => {
      */
     initMap();
 });
-
-function displayStoryContent(elementId) {
-    console.log("displayStoryContent execute!")
-
-    // remover clase active a todos los botones
-    let buttons = document.querySelectorAll(".story .actions button")
-    for (var i = 0; i < buttons.length; i++) {
-        buttons[i].classList.remove('active')
-    }
-
-    // acceder al elemento para ocultar
-    let divsToHide = document.getElementsByClassName("internal-content")
-    // recorrer el conjunto de datos devuelto por el className
-    for (var i = 0; i < divsToHide.length; i++) {
-        divsToHide[i].style.display = 'none'
-    }
-    // i = 0; i < 3; i =  i + 1 => true
-    // i = 1; i < 3; i =  i + 1 => true
-    // i = 2; i < 3; i =  i + 1 => true
-    // i = 3; i < 3; i =  i + 1 => false
-
-    // acceder al elemento
-    let divToDisplay = document.getElementById(elementId)
-    divToDisplay.style.display = "block"
-}
 
 function openPromoVideo() {
     let overlay = document.getElementById('overlay')
@@ -235,7 +196,7 @@ function moveTestimonialsBy1(index) {
 
     // si index = 0 entonces el elementro a mostrar el 1
     // si index = 0 => elemento = index + 1
-    document.querySelector('.testimonials .cards .card:nth-child('+(index + 1)+')').classList.add('active')
+    document.querySelector('.testimonials .cards .card:nth-child(' + (index + 1) + ')').classList.add('active')
 
     // añadir clase activa al controlador
     index++

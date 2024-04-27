@@ -1,0 +1,83 @@
+
+/**
+Promo Video
+**/
+.promo {
+    text-align: center;
+    padding: 100px 0;
+}
+
+.promo span {
+    color: #155bd5;
+    border: solid 2px #155bd5;
+    font-size: 14px;
+    padding: 8px 30px;
+    border-radius: 20px;
+}
+
+.promo>p {
+    width: 520px;
+    margin: 16px auto;
+}
+
+.promo .video {
+    margin-top: 50px;
+    position: relative;
+}
+
+.promo .video .button {
+    position: absolute;
+    top: calc(50% - 40px);
+    left: calc(50% - 40px);
+    border-radius: 80px;
+    background-color: white;
+    color: #155bd5;
+}
+
+.promo .video .button i {
+    font-size: 80px;
+}
+
+.promo .video .button:hover {
+    color: white;
+    background-color: #155bd5;
+    cursor: pointer;
+}
+
+.promo #divPromoVideo {
+    display: none;
+    position: fixed;
+    top: calc(50% - 157px);
+    left: calc(50% - 280px);
+    z-index: 1;
+    width: 560px;
+    height: 315px;
+}
+
+@media (max-width: 1360px) {}
+
+
+@media (max-width: 860px) {
+    #btnPromoVideo img {
+        width: 100%;
+    }
+
+    #divPromoVideo {
+        width: 560px;
+    }
+}
+
+@media (max-width: 520px) {
+    .promo>p {
+        width: 100%;
+    }
+
+    #divPromoVideo {
+        width: 100%;
+    }
+
+    #divPromoVideo iframe {
+        width: 500px;
+        padding: 20px;
+    }
+}
