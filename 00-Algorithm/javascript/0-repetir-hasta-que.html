@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repetir... Hasta Que</title>
+    <style>
+        code {
+            white-space: pre;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>REPETIR... HASTA QUE</h1>
+    <code>
+INICIO
+    REPETIR
+        ESCRIBIR "Ingrese un numero mayor que 10"
+        LEER numero
+        ESCRIBIR "Número ingresado:", numero
+    HASTA QUE numero <= 10
+FIN
+    </code>
+
+    <div class="container">
+        <section>
+            <h2>Probar codigo en consola</h2>
+            <p>Abre la consola y presiona el boton "ejecutar en consola".</p>
+            <button id="console">Ejecutar en consola</button>
+        </section>
+    </div>
+
+    <script>
+        // prueba en consola
+        document.getElementById('console').addEventListener('click', main)
+        function main() {
+            let numero
+            do {
+                console.log("Ingrese un numero mayor que 10")
+                numero = parseInt(prompt("Ingrese un numero"))
+                console.log("Numero ingresado: " + numero)
+            } while (numero <= 10)
+        }
+    </script>
+</body>
+
+</html>

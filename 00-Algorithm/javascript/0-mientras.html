@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mientras</title>
+    <style>
+        code {
+            white-space: pre;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>MIENTRAS</h1>
+    <code>
+INICIO
+    numero = 1
+    MIENTRAS numero <= 5 HACER
+        ESCRIBIR numero
+        numero = numero + 1
+    FIN MIENTRAS
+FIN        
+    </code>
+
+    <div class="container">
+        <section>
+            <h2>Probar codigo en consola</h2>
+            <p>Abre la consola y presiona el boton "ejecutar en consola".</p>
+            <button id="console">Ejecutar en consola</button>
+        </section>
+
+        <section>
+            <h2>Probar codigo en formulario</h2>
+            <p>Ingresa el numero de repeticiones en el input y presiona el boton enviar.</p>
+            <form id="form">
+                <label>
+                    Ingresar dia de la semana:
+                    <input id="number" type="number" min="1" max="100" />
+                    <button>Enviar</button>
+                </label>
+            </form>
+
+            <p id="result">Resultado: </p>
+        </section>
+    </div>
+
+    <script>
+        // prueba en consola
+        document.getElementById('console').addEventListener('click', main)
+        function main() {
+            let numero = 1
+            while (numero <= 5) {
+                console.log(numero)
+                numero = numero + 1
+            }
+        }
+
+        // prueba en formulario
+        let formEl = document.getElementById('form')
+        formEl.addEventListener('submit', onSubmit)
+
+        function onSubmit(event) {
+            event.preventDefault();
+
+            let numero = 1
+            let repeticiones = document.getElementById('number').value
+            let resultEl = document.getElementById('result')
+            resultEl.innerText = 'Resultado:'
+
+            while (numero <= repeticiones) {
+                let spanEl = document.createElement('span')
+                spanEl.textContent = numero
+                resultEl.appendChild(spanEl)
+                numero = numero + 1
+            }
+        }
+    </script>
+</body>
+
+</html>

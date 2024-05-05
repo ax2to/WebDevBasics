@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Cada</title>
+    <style>
+        .container {
+            display: flex;
+            gap: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>PARA CADA</h1>
+    <code style="white-space: pre;">
+INICIO
+    LISTA numeros = [1, 2, 3, 4, 5]
+    PARA CADA numero EN numeros HACER
+        ESCRIBIR numero
+    FIN PARA CADA
+FIN
+    </code>
+
+    <div class="container">
+        <section>
+            <h2>Probar codigo en consola</h2>
+            <p>Abre la consola y presiona el boton "ejecutar en consola".</p>
+            <button id="console">Ejecutar en consola</button>
+        </section>
+    </div>
+
+    <script>
+        // prueba en consola
+        document.getElementById('console').addEventListener('click', main)
+        function main() {
+            let numeros = [1, 2, 3, 4, 5]
+            for (let numero of numeros) {
+                console.log(numero)
+            }
+
+        }
+    </script>
+</body>
+
+</html>

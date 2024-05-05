@@ -1,6 +1,6 @@
 # Algoritmos
 
-Un algoritmo es un conjunto de instrucciones o reglas definidas que se siguen para realizar una tarea o resolver un problema. En términos más técnicos, es una secuencia de operaciones que se llevan a cabo para transformar la entrada de datos en una salida deseada. Estas instrucciones deben ser claras, precisas, y llevarse a cabo en un número finito de pasos.
+Un algoritmo es un conjunto de instrucciónes o reglas definidas que se siguen para realizar una tarea o resolver un problema. En términos más técnicos, es una secuencia de operaciones que se llevan a cabo para transformar la entrada de datos en una salida deseada. Estas instrucciónes deben ser claras, precisas, y llevarse a cabo en un número finito de pasos.
 
 [Definicion segun la RAE](https://dle.rae.es/algoritmo)
 
@@ -139,7 +139,7 @@ Fin Proceso
 ```
 
 **Indentación**
-Aunque el pseudocódigo no tiene un estándar formal que exija el uso de indentación, es una práctica común utilizarla para mostrar la estructura del algoritmo claramente, especialmente para destacar las relaciones jerárquicas entre las diversas instrucciones. 
+Aunque el pseudocódigo no tiene un estándar formal que exija el uso de indentación, es una práctica común utilizarla para mostrar la estructura del algoritmo claramente, especialmente para destacar las relaciones jerárquicas entre las diversas instrucciónes. 
 ```
 INICIO
     SI 1 > 0 ENTONCES
@@ -149,7 +149,7 @@ FIN
 ```
 
 **Nomenclatura**
-No hay reglas estrictas sobre el uso de mayúsculas o minúsculas en pseudocódigo. Algunos prefieren usar mayúsculas para palabras clave como SI, ENTONCES, FIN, etc., para diferenciarlas claramente de las variables y otras instrucciones. Otros optan por escribir todo en minúsculas para simplificar.
+No hay reglas estrictas sobre el uso de mayúsculas o minúsculas en pseudocódigo. Algunos prefieren usar mayúsculas para palabras clave como SI, ENTONCES, FIN, etc., para diferenciarlas claramente de las variables y otras instrucciónes. Otros optan por escribir todo en minúsculas para simplificar.
 ```
 // Palabras clave en mayuscula
 INICIO
@@ -263,13 +263,13 @@ Ejemplos en codigo:
 // Caso o Según
 CASO <expresion> DE
     <opcion1>:
-        <instruccion1>
+        <instrucción1>
     <opcion2>:
-        <instruccion2>
+        <instrucción2>
     <opcionN>:
-        <instruccionN>
+        <instrucciónN>
     SINO
-        <instruccion sino>
+        <instrucción sino>
 FIN CASO
 
 
@@ -321,41 +321,84 @@ Ejemplos en codigo:
 Estos son usados para repetir un bloque de código múltiples veces.
 
 - Mientras: Repite un bloque de código mientras una condición sea verdadera.
+Antes de cada iteración, se evalúa la condición. Si es verdadera, se ejecutan las instrucciones dentro del bloque; si es falsa, se sale del bucle. Es importante tener en cuenta que si la condición es falsa desde el principio, el bloque de instrucciones no se ejecutará en absoluto.
 ```
-Inicio
+MIENTRAS <expresion> HACER
+    <instrucción>
+FIN MIENTRAS
+
+// Ejemplo
+INICIO
     numero = 1
-    Mientras numero <= 5 Hacer
-        Escribir numero
+    MIENTRAS numero <= 5 HACER
+        ESCRIBIR numero
         numero = numero + 1
-    Fin Mientras
-Fin
+    FIN MIENTRAS
+FIN
 ```
-- Repetir... Hasta que: Ejecuta un bloque de código hasta que la condición especificada se cumpla.
+Ejemplos en codigo:
+[Javascript](javascript/0-mientras.html) |
+[Python]() |
+[PHP]()
+
+- Repetir... Hasta Que: Ejecuta un bloque de instrucciones al menos una vez y luego repite el bloque hasta que se cumple una condición determinada.
+La condición se evalúa al final de cada iteración. Si es verdadera, el bucle se repite; si es falsa, el bucle se detiene.
+A diferencia de la estructura MIENTRAS, las instrucciones dentro del bloque siempre se ejecutan al menos una vez.
 ```
-Inicio
-    Repetir
-        Leer numero
-        Escribir "Número ingresado:", numero
-    Hasta Que numero == 0
-Fin
+REPETIR
+    <instrucción>
+HASTA QUE <expresion>
+
+// Ejemplo
+INICIO
+    REPETIR
+        ESCRIBIR "Ingrese un numero mayor que 10"
+        LEER numero
+        ESCRIBIR "Número ingresado:", numero
+    HASTA QUE numero <= 10
+FIN
 ```
+Ejemplos en codigo:
+[Javascript](javascript/0-repetir-hasta-que.html) |
+[Python]() |
+[PHP]()
+
 - Para... Hacer: Ejecuta un bloque de código un número determinado de veces, que puede ser definido por un contador.
 ```
+PARA <inicialización> <condición> <actualización> HACER
+    <instrucción>
+FIN PARA
+
+// Ejemplo
 INICIO
-    Para i = 1 Hasta 10 Hacer
-        Escribir i
-    Fin Para
+    PARA i = 1 Hasta 10 Paso 1 HACER
+        ESCRIBIR i
+    FIN PARA
 FIN
 ```
+Ejemplos en codigo:
+[Javascript](javascript/0-para-hacer.html) |
+[Python]() |
+[PHP]()
+
 - Cada o Para cada: Usado para iterar sobre los elementos de una colección o rango.
 ```
+PARA CADA <elemento> EN <arreglo>
+    <instrucción>
+FIN PARA CADA
+
+// Ejemplo
 INICIO
-    Lista numeros = [1, 2, 3, 4, 5]
-    Para cada numero en numeros Hacer
-        Escribir numero
-    Fin Para Cada
+    LISTA numeros = [1, 2, 3, 4, 5]
+    PARA CADA numero EN numeros HACER
+        ESCRIBIR numero
+    FIN PARA CADA
 FIN
 ```
+Ejemplos en codigo:
+[Javascript](javascript/0-para-cada.html) |
+[Python]() |
+[PHP]()
 
 **Operadores lógicos**
 Usados para combinar múltiples condiciones o para negar una condición.
