@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Si... Entonces... Sino</title>
+    <style>
+        .container {
+            display: flex;
+            gap: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>SI... ENTONCES... SINO</h1>
+    <code style="white-space: pre;">
+INICIO
+    ESCRIBIR "Ingrese su edad"
+    LEER edad
+
+    SI edad >= 18 ENTONCES
+        Escribir "Usted es mayor de edad."
+    SINO
+        Escribir "Usted es menor de edad."
+    FIN SI
+FIN 
+    </code>
+
+    <div class="container">
+        <section>
+            <h2>Probar codigo en consola</h2>
+            <p>Abre la consola y presiona el boton "ejecutar en consola".</p>
+            <button id="console">Ejecutar en consola</button>
+        </section>
+
+        <section>
+            <h2>Probar codigo en formulario</h2>
+            <p>Ingresa la edad en el input y presiona el boton enviar.</p>
+            <form id="form">
+                <label>
+                    Ingresar edad:
+                    <input id="age" type="number" />
+                    <button>Enviar</button>
+                </label>
+            </form>
+
+            <p>Resultado: <span id="result"></span></p>
+        </section>
+    </div>
+
+    <script>
+        // prueba en consola
+        document.getElementById('console').addEventListener('click', main)
+        function main() {
+            console.log("Ingrese su edad")
+            let edad = parseInt(prompt("Ingrese su edad"))
+
+            if (edad >= 18) {
+                console.log("Usted es mayor de edad.")
+            } else {
+                console.log("Usted es menor de edad.")
+            }
+        }
+
+        // prueba en formulario
+        let formEl = document.getElementById('form')
+        formEl.addEventListener('submit', onSubmit)
+
+        function onSubmit(event) {
+            event.preventDefault();
+
+            let edad = document.getElementById('age').value
+            let resultEl = document.getElementById('result')
+
+            if (edad >= 18) {
+                resultEl.innerText = "Usted es mayor de edad."
+            } else {
+                resultEl.innerText = "Usted es menor de edad."
+            }
+        }
+    </script>
+</body>
+
+</html>

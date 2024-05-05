@@ -239,18 +239,27 @@ Conjunto diasLaborales = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes"]
 Estas estructuras permiten dirigir el flujo del algoritmo basándose en decisiones o condiciones.
 
 - Si... Entonces... Sino: Usada para ejecutar bloques de código basados en una condición booleana.
-- Caso o Según: Permite la selección múltiple basada en el valor de una variable.
+
 ```
 // Si... Entonces... Sino
-Inicio
-    Leer edad
-    Si edad >= 18 Entonces
-        Escribir "Usted es mayor de edad."
-    Sino
-        Escribir "Usted es menor de edad."
-    Fin Si
-Fin
+INICIO
+    ESCRIBIR "Ingrese su edad"
+    LEER edad
 
+    SI edad >= 18 ENTONCES
+        Escribir "Usted es mayor de edad."
+    SINO
+        Escribir "Usted es menor de edad."
+    FIN SI
+FIN
+```
+Ejemplos en codigo:
+[Javascript](javascript/0-si-entonces-sino.html) |
+[Python]() |
+[PHP]()
+
+- Caso o Según: Permite la selección múltiple basada en el valor de una variable.
+```
 // Caso o Según
 Inicio
     Leer dia
@@ -262,6 +271,11 @@ Inicio
     Fin Caso
 Fin
 ```
+Ejemplos en codigo:
+[Javascript](javascript/0-caso.html) |
+[Python]() |
+[PHP]()
+
 
 **Bucles o ciclos**
 Estos son usados para repetir un bloque de código múltiples veces.
