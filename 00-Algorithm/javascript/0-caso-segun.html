@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>caso | segun</title>
+    <style>
+        .container {
+            display: flex;
+            gap: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CASO | SEGUN</h1>
+    <code style="white-space: pre;">
+INICIO
+    LEER dia
+    CASO dia DE
+        "Lunes", "Martes", "Miércoles", "Jueves", "Viernes":
+            ESCRIBIR "Es un día laboral."
+        "Sábado", "Domingo":
+            ESCRIBIR "Es fin de semana."
+        SINO:
+            ESCRIBIR "No es un dia de la semana."
+    FIN CASO
+FIN
+
+
+INICIO
+    LEER dia
+    SEGUN dia HACER
+        CASO "Lunes":
+        CASO "Martes":
+        CASO "Miércoles":
+        CASO "Jueves":
+        CASO "Viernes":
+            ESCRIBIR "Es un día laboral."
+        CASO "Sábado":
+        CASO "Domingo":
+            ESCRIBIR "Es fin de semana."
+        SINO:
+            ESCRIBIR "No es un dia de la semana."
+    FIN SEGUN
+FIN
+    </code>
+
+    <div class="container">
+        <section>
+            <h2>Probar codigo en consola</h2>
+            <p>Abre la consola y presiona el boton "ejecutar en consola".</p>
+            <button id="console">Ejecutar en consola</button>
+        </section>
+
+        <section>
+            <h2>Probar codigo en formulario</h2>
+            <p>Ingresa un dia de la semana en el input y presiona el boton enviar.</p>
+            <form id="form">
+                <label>
+                    Ingresar dia de la semana:
+                    <input id="day" type="text" />
+                    <button>Enviar</button>
+                </label>
+            </form>
+
+            <p>Resultado: <span id="result"></span></p>
+        </section>
+    </div>
+
+    <script>
+        // prueba en consola
+        document.getElementById('console').addEventListener('click', main)
+        function main() {
+            let dia = prompt("Ingresa un dia de la semana")
+
+            switch (dia) {
+                case "Lunes":
+                case "Martes":
+                case "Miércoles":
+                case "Jueves":
+                case "Viernes":
+                    console.log("Es un día laboral.")
+                    break
+                case "Sábado":
+                case "Domingo":
+                    console.log("Es fin de semana.")
+                    break
+                default:
+                    console.log("No es un dia de la semana.")
+                    break
+            }
+        }
+
+        // prueba en formulario
+        let formEl = document.getElementById('form')
+        formEl.addEventListener('submit', onSubmit)
+
+        function onSubmit(event) {
+            event.preventDefault();
+
+            let dia = document.getElementById('day').value
+            let resultEl = document.getElementById('result')
+
+            switch (dia) {
+                case "Lunes":
+                case "Martes":
+                case "Miércoles":
+                case "Jueves":
+                case "Viernes":
+                    resultEl.innerText = "Es un día laboral."
+                    break
+                case "Sábado":
+                case "Domingo":
+                    resultEl.innerText = "Es fin de semana."
+                    break
+                default:
+                    resultEl.innerText = "No es un dia de la semana."
+                    break
+            }
+        }
+    </script>
+</body>
+
+</html>

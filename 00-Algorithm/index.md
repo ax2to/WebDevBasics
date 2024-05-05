@@ -261,18 +261,58 @@ Ejemplos en codigo:
 - Caso o Según: Permite la selección múltiple basada en el valor de una variable.
 ```
 // Caso o Según
-Inicio
-    Leer dia
-    Caso dia de
+CASO <expresion> DE
+    <opcion1>:
+        <instruccion1>
+    <opcion2>:
+        <instruccion2>
+    <opcionN>:
+        <instruccionN>
+    SINO
+        <instruccion sino>
+FIN CASO
+
+
+SEGUN <expresion> HACER
+    CASO <opcion1>:
+        <intruccion1>
+    CASO <opcion2>:
+        <intruccion2>
+    CASO <optionN>
+        <intruccionN>
+    SINO 
+        <intruccion sino>
+FIN SEGUN
+
+// Ejemplos
+INICIO
+    LEER dia
+    CASO dia DE
         "Lunes", "Martes", "Miércoles", "Jueves", "Viernes":
-            Escribir "Es un día laboral."
+            ESCRIBIR "Es un día laboral."
         "Sábado", "Domingo":
-            Escribir "Es fin de semana."
-    Fin Caso
-Fin
+            ESCRIBIR "Es fin de semana."
+    FIN CASO
+FIN
+
+
+INICIO
+    LEER dia
+    SEGUN dia HACER
+        CASO "Lunes":
+        CASO "Martes":
+        CASO "Miércoles":
+        CASO "Jueves":
+        CASO "Viernes":
+            ESCRIBIR "Es un día laboral."
+        CASO "Sábado":
+        CASO "Domingo":
+            ESCRIBIR "Es fin de semana."
+    FIN SEGUN
+FIN
 ```
 Ejemplos en codigo:
-[Javascript](javascript/0-caso.html) |
+[Javascript](javascript/0-caso-segun.html) |
 [Python]() |
 [PHP]()
 
