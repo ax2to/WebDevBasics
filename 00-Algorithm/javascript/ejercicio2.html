@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio #2</title>
+    <style>
+        code {
+            white-space: pre
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Ejercicio #2</h1>
+    <p>Determinar si una persona es mayor de edad basándose en su edad ingresada por el usuario</p>
+    <code>
+Analisis:
+Entrada: edad
+Salida: si es mayor de edad
+Variables: edad, mayoridadEdad, mensaje
+
+INICIO
+        DEFINIR mayoridadEdad = 18
+
+        ESCRIBIR "Ingrese su edad"
+        LEER edad
+
+        SI edad < mayoridadEdad ENTONCES
+            mensaje = "Eres menor de edad"
+        SINO
+            mensaje = "Eres mayor de edad"
+        FIN SI
+
+        ESCRIBIR mensaje
+FIN
+    </code>
+
+    <hr>
+    <button id="console">Ejecutar en consola</button>
+
+    <hr>
+    <form id="form">
+        <label>Ingrese su edad
+            <input id="age">
+        </label>
+        <button>Enviar</button>
+    </form>
+
+    <p>Resultado: <span id="result"></span></p>
+
+    <script>
+        // consola
+        let consoleButtonEl = document.getElementById("console")
+        consoleButtonEl.addEventListener("click", function () {
+            let mayoridadEdad = 18
+            let mensaje = ""
+
+            console.log("Ingrese su edad")
+            let edad = prompt("Ingrese su edad")
+
+            if (edad < mayoridadEdad) {
+                mensaje = "Eres menor de edad"
+            } else {
+                mensaje = "eres mayor de edad"
+            }
+
+            console.log(mensaje)
+        })
+
+        // formulario
+        let formEl = document.getElementById("form")
+        formEl.addEventListener("submit", onSubmit)
+
+        let ageEl = document.getElementById("age")
+        let resultEl = document.getElementById("result")
+
+        let mensaje = ''
+
+        function onSubmit(event) {
+            event.preventDefault()
+
+            let mayoridadEdad = 18
+
+            let edad = ageEl.value
+
+            if (edad < mayoridadEdad) {
+                mensaje = "Eres menor de edad"
+            } else {
+                mensaje = "Eres mayor de edad"
+            }
+
+            resultEl.innerText = mensaje
+        }
+    </script>
+</body>
+
+</html>

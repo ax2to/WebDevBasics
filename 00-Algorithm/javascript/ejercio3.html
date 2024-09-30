@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio #3</title>
+    <style>
+        code {
+            white-space: pre;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Ejercicio #3</h1>
+    <p>Calcular el factorial de un número entero no negativo ingresado por el usuario
+    </p>
+
+    <p>Factorial:</p>
+    <p>!3 = 1 x 2 x 3 = 6</p>
+    <p>!5 = 1 x 2 x 3 x 4 x 5 = 120</p>
+    <p>!7 = 1 x 2 x 3 x 4 x 5 x 6 x 7 = 5040</p>
+
+    <code>
+Analisis:
+Entrada: numero entero no negativo
+Salida: factorial del numero
+Variables: numero, resultado
+
+INICIO
+        DEFINIR resultado = 1
+
+        ESCRIBIR "Ingrese un numero"
+        LEER numero
+
+        PARA i = 1 HASTA numero PASO 1 HACER
+            resultado = resultado * i 
+
+            // i = 1 -> resultado = 1
+            // i = 2 -> resultado = 2
+            // i = 3 -> resultado = 6
+            // i = 4 -> resultado = 24
+            // i = 5 -> resultado = 120
+            // i = 6 -> resultado = 720
+        FIN PARA
+
+        ESCRIBIR resultado
+FIN
+    </code>
+    <hr>
+    <button id="console">Ejecutar en consola</button>
+    <hr>
+    <form id="form">
+        <label>
+            Ingrese un numero
+            <input id="number">
+        </label>
+        <button>Enviar</button>
+    </form>
+    <p>Resultado: <span id="result"></span></p>
+
+    <script>
+        // consola
+        let consoleEl = document.getElementById("console")
+        consoleEl.addEventListener("click", function () {
+            let resultado = 1
+
+            console.log("Ingrese un numero")
+            let numero = prompt("Ingrese un numero")
+
+            for (i = 1; i <= numero; i++) {
+                resultado = resultado * i
+            }
+
+            console.log(resultado)
+        })
+
+        // formulario
+        let formEl = document.getElementById("form")
+        let inputEl = document.getElementById("number")
+        let spanEl = document.getElementById("result")
+
+        formEl.addEventListener("submit", onSubmit)
+
+        function onSubmit(event) {
+            event.preventDefault();
+
+            let resultado = 1
+
+            let numero = inputEl.value
+
+            for (i = 1; i <= numero; i++) {
+                resultado = resultado * i
+            }
+
+            spanEl.innerText = resultado
+        }
+
+    </script>
+</body>
+
+</html>

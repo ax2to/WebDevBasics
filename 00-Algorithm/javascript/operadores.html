@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadores</title>
+</head>
+
+<body>
+    <script>
+        //evaluarEstudiante()
+        selecionarGaseosa()
+
+        /*
+        INICIO
+            Leer edad
+            Leer estudiante
+            
+            Si edad >= 18 Y No estudiante Entonces
+                Escribir "Es mayor de edad y no es estudiante."
+            Fin Si
+        FIN
+        */
+        function evaluarEstudiante() {
+            let edad = 20
+            let estudiante = false
+
+            console.log(edad >= 18) // true
+            console.log(estudiante) // false
+            console.log(!estudiante) // true
+
+            // true && true = true
+            if (edad >= 18 && !estudiante) {
+                console.log("Es mayor de edad y no es estudiante.")
+            } else {
+                console.log("No aplica")
+            }
+        }
+
+        function selecionarGaseosa() {
+            let gaseosa = "corona"
+            let gaseosas = ["fanta", "inca", "coca", "pepsi"]
+
+            // false || false || true = true
+            if (gaseosas.includes(gaseosa)) {
+                console.log("eligio gaseosa")
+            } else {
+                console.log("no eligio gaseosa")
+            }
+
+        }
+    </script>
+</body>
+
+</html>

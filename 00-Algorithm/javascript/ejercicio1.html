@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio #1</title>
+</head>
+
+<body>
+    <h1>Ejercicio #1</h1>
+    <p>Escribir un algoritmo que tome dos números ingresados por el usuario y muestre su suma</p>
+    <code style="white-space: pre;">
+Analisis
+Entrada: Dos numeros 
+Salida: Suma de dos numeros
+Variables: Numero1, Numero2, Suma
+
+INICIO
+        ESCRIBIR "Ingresa el primer numero"
+        LEER Numero1
+
+        ESCRIBIR "Ingresa el segundo numero"
+        LEER Numero2
+
+        Suma = Numero1 + Numero2
+
+        ESCRIBIR "La suma de sus dos numeros es:", suma
+FIN
+    </code>
+    <hr>
+    <button id="console">Ejecutar en consola</button>
+
+    <hr>
+    <form id="form">
+        <label>
+            Ingresa el primer numero
+            <input id="number1">
+        </label>
+        <label>
+            Ingresa el segundo numero
+            <input id="number2">
+        </label>
+        <button id="button">Enviar</button>
+    </form>
+    <p>Resultado: <span id="result"></span></p>
+
+    <script>
+        // probar en consola
+        let consoleButtonEl = document.getElementById("console")
+        consoleButtonEl.addEventListener('click', main)
+
+        function main() {
+            console.log("Ingresa el primer numero")
+            let Numero1 = parseInt(prompt("Ingresa el primer numero"))
+
+            console.log("Ingresa el segundo numero")
+            let Numero2 = parseInt(prompt("Ingresa el segundo numero"))
+
+            let Suma = Numero1 + Numero2
+
+            console.log("La suma de sus dos numeros es:" + Suma)
+        }
+
+        // probar en formulario
+        let formEl = document.getElementById("form")
+        formEl.addEventListener("submit", onSubmit)
+
+        function onSubmit(event) {
+            event.preventDefault()
+
+            let numero1El = document.getElementById("number1")
+            let numero1 = parseInt(numero1El.value)
+
+            let numero2El = document.getElementById("number2")
+            let numero2 = parseInt(numero2El.value)
+
+            let suma = numero1 + numero2
+
+            let spanEl = document.getElementById("result")
+            spanEl.innerText = suma
+        }
+    </script>
+</body>
+
+</html>

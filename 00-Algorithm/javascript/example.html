@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RepetirNumero</title>
+</head>
+
+<body>
+    <script>
+        //mientras();
+        //repetirHasta();
+        //paraHasta();
+        paraCada();
+
+
+        /*
+        // Mientras
+        INICIO
+            numero = 1
+            Mientras numero <= 5 Hacer
+                Escribir numero
+                numero = numero + 1
+            Fin Mientras
+        FIN
+        */
+
+        function mientras() {
+            // inicializar
+            let numero = 90
+
+            // mientras
+            while (numero <= 100) { // hacer
+                console.log('Numero actual es: ' + numero)
+                numero = numero + 1
+            } // fin mientras
+        }
+
+        /*
+        // Repetir... Hasta que
+        INICIO
+            Repetir
+                Leer numero
+                Escribir "Número ingresado:", numero
+            Hasta Que numero == 0
+        FIN
+        */
+        function repetirHasta() {
+            console.log('Inicio del ciclo repetir hasta');
+            let numero;
+            do {
+                numero = parseInt(prompt('Ingrese numero:'));
+                console.log('Número ingresado: ' + numero)
+            } while (numero > 10);
+
+            console.log('continuar ejecucion');
+        }
+
+        /*
+        INICIO
+            Para i = 1 Hasta 10 Paso 1 Hacer
+                Escribir i
+            Fin Para
+        FIN
+        */
+        function paraHasta() {
+            for (i = 0; i <= 5; i = i + 3) {
+                console.log(i)
+            }
+        }
+
+        /*
+        // Cada o Para cada 
+        INICIO
+            Lista numeros = [1, 2, 3, 4, 5]
+            
+            Para cada numero en numeros Hacer
+                Escribir numero
+            Fin Para Cada
+        FIN
+
+        */
+        function paraCada() {
+            let numeros = [1, 2, 3, 4, 5]
+
+            for (var numero of numeros) {
+                console.log(numero)
+            }
+        }
+    </script>
+</body>
+
+</html>
